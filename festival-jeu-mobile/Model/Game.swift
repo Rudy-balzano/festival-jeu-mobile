@@ -47,6 +47,5 @@ class Game {
         self.publisher = publisher
         self.gameType = gameType
         self.area = area
-        <#statements#>
     }
 }

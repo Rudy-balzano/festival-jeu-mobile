@@ -19,7 +19,6 @@ class Area {
         self.id = id
         self.label = label
         self.games = []
-        <#statements#>
     }
     
     func getAreaGames(listGames:[Game]){

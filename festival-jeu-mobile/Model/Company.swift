@@ -20,7 +20,6 @@ class Company {
         self.id = id
         self.name = name
         self.games = []
-        <#statements#>
     }
     
     func getCompanyGames(listGames:[Game]){
