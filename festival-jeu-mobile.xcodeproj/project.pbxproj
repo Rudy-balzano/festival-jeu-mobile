@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		103D9D4C2609FC6800CB6673 /* festival_jeu_mobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D9D4B2609FC6800CB6673 /* festival_jeu_mobileApp.swift */; };
-		103D9D4E2609FC6800CB6673 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D9D4D2609FC6800CB6673 /* ContentView.swift */; };
 		103D9D502609FC6A00CB6673 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 103D9D4F2609FC6A00CB6673 /* Assets.xcassets */; };
 		103D9D532609FC6A00CB6673 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 103D9D522609FC6A00CB6673 /* Preview Assets.xcassets */; };
 		103D9D5E2609FC6A00CB6673 /* festival_jeu_mobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D9D5D2609FC6A00CB6673 /* festival_jeu_mobileTests.swift */; };
 		103D9D692609FC6A00CB6673 /* festival_jeu_mobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D9D682609FC6A00CB6673 /* festival_jeu_mobileUITests.swift */; };
+		103D9D82260A007E00CB6673 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D9D81260A007E00CB6673 /* MainView.swift */; };
+		103D9D87260A08BD00CB6673 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D9D86260A08BD00CB6673 /* Game.swift */; };
+		103D9D8C260A0A3600CB6673 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D9D8B260A0A3600CB6673 /* Company.swift */; };
+		103D9D91260A0CA700CB6673 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D9D90260A0CA700CB6673 /* GameType.swift */; };
+		103D9D96260A0E4D00CB6673 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D9D95260A0E4D00CB6673 /* Area.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +39,6 @@
 /* Begin PBXFileReference section */
 		103D9D482609FC6800CB6673 /* festival-jeu-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "festival-jeu-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		103D9D4B2609FC6800CB6673 /* festival_jeu_mobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = festival_jeu_mobileApp.swift; sourceTree = "<group>"; };
-		103D9D4D2609FC6800CB6673 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		103D9D4F2609FC6A00CB6673 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		103D9D522609FC6A00CB6673 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		103D9D542609FC6A00CB6673 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +48,11 @@
 		103D9D642609FC6A00CB6673 /* festival-jeu-mobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "festival-jeu-mobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		103D9D682609FC6A00CB6673 /* festival_jeu_mobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = festival_jeu_mobileUITests.swift; sourceTree = "<group>"; };
 		103D9D6A2609FC6A00CB6673 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		103D9D81260A007E00CB6673 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		103D9D86260A08BD00CB6673 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		103D9D8B260A0A3600CB6673 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		103D9D90260A0CA700CB6673 /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
+		103D9D95260A0E4D00CB6673 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +103,12 @@
 		103D9D4A2609FC6800CB6673 /* festival-jeu-mobile */ = {
 			isa = PBXGroup;
 			children = (
+				103D9D7D260A000200CB6673 /* Model */,
+				103D9D7C2609FFF900CB6673 /* ViewModel */,
+				103D9D7B2609FFCD00CB6673 /* Intent */,
+				103D9D7A2609FFC400CB6673 /* Helper */,
+				103D9D792609FFB800CB6673 /* View */,
 				103D9D4B2609FC6800CB6673 /* festival_jeu_mobileApp.swift */,
-				103D9D4D2609FC6800CB6673 /* ContentView.swift */,
 				103D9D4F2609FC6A00CB6673 /* Assets.xcassets */,
 				103D9D542609FC6A00CB6673 /* Info.plist */,
 				103D9D512609FC6A00CB6673 /* Preview Content */,
@@ -128,6 +140,46 @@
 				103D9D6A2609FC6A00CB6673 /* Info.plist */,
 			);
 			path = "festival-jeu-mobileUITests";
+			sourceTree = "<group>";
+		};
+		103D9D792609FFB800CB6673 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				103D9D81260A007E00CB6673 /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		103D9D7A2609FFC400CB6673 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		103D9D7B2609FFCD00CB6673 /* Intent */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Intent;
+			sourceTree = "<group>";
+		};
+		103D9D7C2609FFF900CB6673 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		103D9D7D260A000200CB6673 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				103D9D86260A08BD00CB6673 /* Game.swift */,
+				103D9D8B260A0A3600CB6673 /* Company.swift */,
+				103D9D90260A0CA700CB6673 /* GameType.swift */,
+				103D9D95260A0E4D00CB6673 /* Area.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +311,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				103D9D4E2609FC6800CB6673 /* ContentView.swift in Sources */,
 				103D9D4C2609FC6800CB6673 /* festival_jeu_mobileApp.swift in Sources */,
+				103D9D87260A08BD00CB6673 /* Game.swift in Sources */,
+				103D9D82260A007E00CB6673 /* MainView.swift in Sources */,
+				103D9D91260A0CA700CB6673 /* GameType.swift in Sources */,
+				103D9D96260A0E4D00CB6673 /* Area.swift in Sources */,
+				103D9D8C260A0A3600CB6673 /* Company.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
