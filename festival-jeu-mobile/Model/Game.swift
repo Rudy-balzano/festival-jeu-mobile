@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Game {
+class Game : Identifiable, ObservableObject {
     
     private(set) var id : Int
     
@@ -29,11 +29,11 @@ class Game {
     
     private(set) var publisher : Company
     
-    private(set) var gameType : GameType
+    private(set) var gameType : String
     
     private(set) var area : Area
     
-    init(id:Int, name:String, notice:String, duration:String, minPlayers:Int, maxPlayers:Int, minAge:Int, maxAge:Int, isPrototype:Bool, publisher:Company,gameType:GameType, area:Area) {
+    init(id : Int,name:String, notice:String, duration:String, minPlayers:Int, maxPlayers:Int, minAge:Int, maxAge:Int, isPrototype:Bool, publisher:Company,gameType:String, area:Area) {
         
         self.id = id
         self.name = name

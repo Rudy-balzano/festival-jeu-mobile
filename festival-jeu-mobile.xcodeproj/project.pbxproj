@@ -12,11 +12,14 @@
 		103D9D532609FC6A00CB6673 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 103D9D522609FC6A00CB6673 /* Preview Assets.xcassets */; };
 		103D9D5E2609FC6A00CB6673 /* festival_jeu_mobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D9D5D2609FC6A00CB6673 /* festival_jeu_mobileTests.swift */; };
 		103D9D692609FC6A00CB6673 /* festival_jeu_mobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D9D682609FC6A00CB6673 /* festival_jeu_mobileUITests.swift */; };
-		103D9D82260A007E00CB6673 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D9D81260A007E00CB6673 /* MainView.swift */; };
+		103D9D82260A007E00CB6673 /* GameListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D9D81260A007E00CB6673 /* GameListView.swift */; };
 		103D9D87260A08BD00CB6673 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D9D86260A08BD00CB6673 /* Game.swift */; };
 		103D9D8C260A0A3600CB6673 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D9D8B260A0A3600CB6673 /* Company.swift */; };
-		103D9D91260A0CA700CB6673 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D9D90260A0CA700CB6673 /* GameType.swift */; };
 		103D9D96260A0E4D00CB6673 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D9D95260A0E4D00CB6673 /* Area.swift */; };
+		107F52E3260B259900A06DCA /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F52E2260B259900A06DCA /* GameViewModel.swift */; };
+		107F52E8260B29C800A06DCA /* GameListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F52E7260B29C800A06DCA /* GameListViewModel.swift */; };
+		107F52ED260B2AFD00A06DCA /* GameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F52EC260B2AFD00A06DCA /* GameList.swift */; };
+		107F52F5260B2FBB00A06DCA /* GameDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F52F4260B2FBB00A06DCA /* GameDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,11 +51,14 @@
 		103D9D642609FC6A00CB6673 /* festival-jeu-mobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "festival-jeu-mobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		103D9D682609FC6A00CB6673 /* festival_jeu_mobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = festival_jeu_mobileUITests.swift; sourceTree = "<group>"; };
 		103D9D6A2609FC6A00CB6673 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		103D9D81260A007E00CB6673 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		103D9D81260A007E00CB6673 /* GameListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListView.swift; sourceTree = "<group>"; };
 		103D9D86260A08BD00CB6673 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		103D9D8B260A0A3600CB6673 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
-		103D9D90260A0CA700CB6673 /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
 		103D9D95260A0E4D00CB6673 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		107F52E2260B259900A06DCA /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		107F52E7260B29C800A06DCA /* GameListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewModel.swift; sourceTree = "<group>"; };
+		107F52EC260B2AFD00A06DCA /* GameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameList.swift; sourceTree = "<group>"; };
+		107F52F4260B2FBB00A06DCA /* GameDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +151,8 @@
 		103D9D792609FFB800CB6673 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				103D9D81260A007E00CB6673 /* MainView.swift */,
+				103D9D81260A007E00CB6673 /* GameListView.swift */,
+				107F52F4260B2FBB00A06DCA /* GameDetails.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +174,8 @@
 		103D9D7C2609FFF900CB6673 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				107F52E2260B259900A06DCA /* GameViewModel.swift */,
+				107F52E7260B29C800A06DCA /* GameListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -176,8 +185,8 @@
 			children = (
 				103D9D86260A08BD00CB6673 /* Game.swift */,
 				103D9D8B260A0A3600CB6673 /* Company.swift */,
-				103D9D90260A0CA700CB6673 /* GameType.swift */,
 				103D9D95260A0E4D00CB6673 /* Area.swift */,
+				107F52EC260B2AFD00A06DCA /* GameList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -311,10 +320,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				107F52E8260B29C800A06DCA /* GameListViewModel.swift in Sources */,
+				107F52E3260B259900A06DCA /* GameViewModel.swift in Sources */,
 				103D9D4C2609FC6800CB6673 /* festival_jeu_mobileApp.swift in Sources */,
+				107F52F5260B2FBB00A06DCA /* GameDetails.swift in Sources */,
 				103D9D87260A08BD00CB6673 /* Game.swift in Sources */,
-				103D9D82260A007E00CB6673 /* MainView.swift in Sources */,
-				103D9D91260A0CA700CB6673 /* GameType.swift in Sources */,
+				103D9D82260A007E00CB6673 /* GameListView.swift in Sources */,
+				107F52ED260B2AFD00A06DCA /* GameList.swift in Sources */,
 				103D9D96260A0E4D00CB6673 /* Area.swift in Sources */,
 				103D9D8C260A0A3600CB6673 /* Company.swift in Sources */,
 			);

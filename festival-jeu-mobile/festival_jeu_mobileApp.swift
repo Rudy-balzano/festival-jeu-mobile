@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct festival_jeu_mobileApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            MainView()
+            GameListView(gameList: GameListViewModel(GameList()))
         }
     }
 }
