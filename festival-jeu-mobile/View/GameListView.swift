@@ -12,6 +12,7 @@ struct GameListView: View {
     @ObservedObject var gameList : GameListViewModel
     var intent : GameListViewIntent
     
+    
     private var url: String = "http://localhost:3000/festival/current/reserved-games"
     
     init(gameList : GameListViewModel){
@@ -57,11 +58,11 @@ struct GameListView: View {
     var body: some View {
         return NavigationView{
             VStack{
-                TextField("term filter", text: $textSearch)
+                TextField("term filter", text: $textSearch).font(.footnote)
                 Spacer()
                 ZStack{
                     List{
-                        ForEach( self.gameList.games){ game in
+                        ForEach( self.gameList.games.filter(filterSearch)){ game in
                             NavigationLink(destination: GameDetailsView(game: gameList, gameViewed: game)){
                                 Text(game.model.name)
                                 
