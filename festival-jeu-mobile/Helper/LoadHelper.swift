@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GameData : Codable {
+struct GameData : Decodable {
     var id : Int
     var name : String
     var duration : String
@@ -73,7 +73,7 @@ struct LoadHelper {
             URLSession.shared.dataTask(with: request) { data, response, error in
                 if let data = data {
                     let decodedData : Decodable?
-                        decodedData = try? JSONDecoder().decode([GameData].self, from: data)
+                    decodedData = try? JSONDecoder().decode([GameData].self, from: data)
                     guard let decodedResponse = decodedData else {
                         DispatchQueue.main.async { endofrequest(.failure(.JsonDecodingFailed)) }
                         return

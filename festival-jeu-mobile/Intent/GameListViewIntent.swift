@@ -21,9 +21,12 @@ class GameListViewIntent{
     }
     
     func httpJsonLoaded(result : Result<[Game],HttpRequestError>){
+        print("aaaa")
         switch result {
         case let .success(data):
+            print(data)
             if let name = nameFilter{
+                print("a")
                 let games = data.filter({game in game.name.lowercased().contains(name.lowercased())})
                 gameList.gameListState = .loaded(games)
             }
@@ -45,5 +48,6 @@ class GameListViewIntent{
         self.nameFilter = nameFilter
         gameList.gameListState = .loading(url)
         LoadHelper.loadGamesFromAPI(url: url, endofrequest: httpJsonLoaded)
+        //print(gameList.games.count)
     }
 }

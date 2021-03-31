@@ -12,10 +12,14 @@ struct GameListView: View {
     @ObservedObject var gameList : GameListViewModel
     var intent : GameListViewIntent
     
+    private var url: String = "http://localhost:3000/festival/current/reserved-games"
+    
     init(gameList : GameListViewModel){
         self.gameList = gameList
         self.intent = GameListViewIntent(gameList: gameList)
         let _ = self.gameList.$gameListState.sink(receiveValue: stateChanged)
+        
+        self.intent.loadGameList(url: url, nameFilter: nil)
     }
     
     private var searchState : GameListState{

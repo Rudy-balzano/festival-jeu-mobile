@@ -9,10 +9,10 @@ import SwiftUI
 
 struct MainView: View {
     
-    @StateObject var gameList : GameListViewModel = GameListViewModel(GameList())
+//    @StateObject var gameList : GameListViewModel = GameListViewModel(GameList())
     
     var body: some View {
-        GameListView(gameList: gameList)
+        GameListView(gameList: GameListViewModel(GameList()))
     }
 }
 
