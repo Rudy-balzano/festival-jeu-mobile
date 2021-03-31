@@ -70,7 +70,7 @@ struct GameListView: View {
                         }
                     }
                 }
-            }
+            }.navigationTitle("List of games")
         }
     }
 }
