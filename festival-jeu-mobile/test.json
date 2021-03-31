@@ -1,0 +1,30 @@
+[
+    {
+        "publisher": 1,
+        "gameType": "famille",
+        "area": 1,
+        "id": 1,
+        "name": "Monopoly",
+        "notice": "empty",
+        "duration": "2 heures",
+        "minPlayers": 3,
+        "maxPlayers": 5,
+        "minAge": 7,
+        "maxAge": 99,
+        "isPrototype": false
+    },
+    {
+        "publisher": 1,
+        "gameType": "famille",
+        "area": 1,
+        "id": 2,
+        "name": "Monopoly",
+        "notice": "empty",
+        "duration": "2 heures",
+        "minPlayers": 3,
+        "maxPlayers": 5,
+        "minAge": 7,
+        "maxAge": 99,
+        "isPrototype": false
+    }
+]

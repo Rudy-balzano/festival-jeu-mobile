@@ -10,7 +10,7 @@ import SwiftUI
 
 class GameViewModel: Identifiable {
     
-    private(set) var model : Game
+    @ObservedObject private(set) var model : Game
     
     var id : Int{
         return model.id
@@ -48,7 +48,7 @@ class GameViewModel: Identifiable {
         return model.isPrototype
     }
     
-    var publisher : Company{
+    var publisher : String{
         return model.publisher
     }
     
@@ -56,7 +56,7 @@ class GameViewModel: Identifiable {
         return model.gameType
     }
     
-    var area : Area{
+    var area : String{
         return model.area
     }
     

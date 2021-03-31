@@ -22,11 +22,11 @@ class Company {
         self.games = []
     }
     
-    func getCompanyGames(listGames:[Game]){
-        for i in listGames{
-            if i.publisher.name == self.name {
-                self.games.append(i)
-            }
-        }
-    }
+//    func getCompanyGames(listGames:[Game]){
+//        for i in listGames{
+//            if i.publisher.name == self.name {
+//                self.games.append(i)
+//            }
+//        }
+//    }
 }

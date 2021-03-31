@@ -7,11 +7,28 @@
 
 import Foundation
 
+protocol GameListDelegate {
+    func newGameList()
+    func gameListDeleted()
+}
+
 class GameList: ObservableObject {
     
-    private(set) var games = [Game]()
+    var delegate: GameListDelegate?
+    
+    private(set) var games : [Game]
+    
+    init(){
+        self.games = []
+    }
     
     func new(games: [Game]){
         self.games = games
+        self.delegate?.newGameList()
+    }
+    
+    func removeAllGames(){
+        self.games.removeAll()
+        self.delegate?.gameListDeleted()
     }
 }

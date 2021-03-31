@@ -27,13 +27,13 @@ class Game : Identifiable, ObservableObject {
     
     private(set) var isPrototype : Bool
     
-    private(set) var publisher : Company
+    private(set) var publisher : String
     
     private(set) var gameType : String
     
-    private(set) var area : Area
+    private(set) var area : String
     
-    init(id : Int,name:String, notice:String, duration:String, minPlayers:Int, maxPlayers:Int, minAge:Int, maxAge:Int, isPrototype:Bool, publisher:Company,gameType:String, area:Area) {
+    init(id : Int,name:String, notice:String, duration:String, minPlayers:Int, maxPlayers:Int, minAge:Int, maxAge:Int, isPrototype:Bool, publisher:String,gameType:String, area:String) {
         
         self.id = id
         self.name = name
@@ -47,5 +47,20 @@ class Game : Identifiable, ObservableObject {
         self.publisher = publisher
         self.gameType = gameType
         self.area = area
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case name = "name"
+        case duration = "duration"
+        case notice = "notice"
+        case minPlayers = "minPlayers"
+        case maxPlayers = "maxPlayers"
+        case minAge = "minAge"
+        case maxAge = "maxAge"
+        case isPrototype = "isPrototype"
+        case publisher = "publisherName"
+        case gameType = "gameType"
+        case area = "areaName"
     }
 }

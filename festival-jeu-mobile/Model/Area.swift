@@ -21,11 +21,11 @@ class Area {
         self.games = []
     }
     
-    func getAreaGames(listGames:[Game]){
-        for i in listGames{
-            if i.area.label == self.label {
-                self.games.append(i)
-            }
-        }
-    }
+//    func getAreaGames(listGames:[Game]){
+//        for i in listGames{
+//            if i.area.label == self.label {
+//                self.games.append(i)
+//            }
+//        }
+//    }
 }
