@@ -62,7 +62,10 @@ struct GameListView: View {
                 ZStack{
                     List{
                         ForEach( self.gameList.games){ game in
-                            Text(game.model.name)
+                            NavigationLink(destination: GameDetailsView(game: gameList, gameViewed: game)){
+                                Text(game.model.name)
+                                
+                            }
                         }
                     }
                 }

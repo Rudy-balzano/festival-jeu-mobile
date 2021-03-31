@@ -9,21 +9,25 @@ import SwiftUI
 
 struct GameDetailsView: View {
     
-    var game: Game
+    //var game: Game
+    @ObservedObject var gamelist : GameListViewModel
+    let jeu : GameViewModel
     
-    init(game : Game){
-        self.game = game
+    init(game : GameListViewModel, gameViewed: GameViewModel){
+        self.gamelist = game
+        self.jeu = gameViewed
     }
     
     var body: some View {
         VStack{
             HStack{
-                Text(game.name)
+                Text(jeu.name)
+                Text(jeu.notice)
                 Spacer()
             }
-            HStack{
-                Text(game.notice)
-            }
+//            HStack{
+//                Text(game.notice)
+//            }
         }
     }
 }
