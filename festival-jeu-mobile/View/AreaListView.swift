@@ -58,7 +58,7 @@ struct AreaListView: View {
     var body: some View {
         return NavigationView{
             VStack{
-                TextField("term filter", text: $textSearch).font(.footnote)
+                TextField("Area filter", text: $textSearch).font(.footnote)
                 Spacer()
                 ZStack{
                     List{

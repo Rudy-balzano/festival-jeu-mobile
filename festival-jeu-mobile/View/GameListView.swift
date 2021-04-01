@@ -59,7 +59,7 @@ struct GameListView: View {
     var body: some View {
         return NavigationView{
             VStack{
-                TextField("term filter", text: $textSearch).font(.footnote)
+                TextField("Game filter", text: $textSearch).font(.footnote)
                 Spacer()
                 ZStack{
                     List{
