@@ -25,6 +25,8 @@
 		107F52FE260B5B5100A06DCA /* InOutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F52FD260B5B5100A06DCA /* InOutHelper.swift */; };
 		107F5303260B5E3400A06DCA /* LoadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F5302260B5E3400A06DCA /* LoadHelper.swift */; };
 		107F5308260B6B5300A06DCA /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 107F5307260B6B5300A06DCA /* test.json */; };
+		6B03D4ED2615E02B00EDBAC8 /* AreaList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B03D4EC2615E02B00EDBAC8 /* AreaList.swift */; };
+		6B03D4F22615E1F200EDBAC8 /* CompanyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B03D4F12615E1F200EDBAC8 /* CompanyList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		107F52FD260B5B5100A06DCA /* InOutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InOutHelper.swift; sourceTree = "<group>"; };
 		107F5302260B5E3400A06DCA /* LoadHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadHelper.swift; sourceTree = "<group>"; };
 		107F5307260B6B5300A06DCA /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		6B03D4EC2615E02B00EDBAC8 /* AreaList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaList.swift; sourceTree = "<group>"; };
+		6B03D4F12615E1F200EDBAC8 /* CompanyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,8 @@
 				103D9D8B260A0A3600CB6673 /* Company.swift */,
 				103D9D95260A0E4D00CB6673 /* Area.swift */,
 				107F52EC260B2AFD00A06DCA /* GameList.swift */,
+				6B03D4EC2615E02B00EDBAC8 /* AreaList.swift */,
+				6B03D4F12615E1F200EDBAC8 /* CompanyList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -340,12 +346,14 @@
 				1015B72D2614865100E3F79B /* MainView.swift in Sources */,
 				107F52FE260B5B5100A06DCA /* InOutHelper.swift in Sources */,
 				1015B728261472C300E3F79B /* GameListViewIntent.swift in Sources */,
+				6B03D4F22615E1F200EDBAC8 /* CompanyList.swift in Sources */,
 				107F52E3260B259900A06DCA /* GameViewModel.swift in Sources */,
 				103D9D4C2609FC6800CB6673 /* festival_jeu_mobileApp.swift in Sources */,
 				107F5303260B5E3400A06DCA /* LoadHelper.swift in Sources */,
 				107F52F5260B2FBB00A06DCA /* GameDetailsView.swift in Sources */,
 				103D9D87260A08BD00CB6673 /* Game.swift in Sources */,
 				103D9D82260A007E00CB6673 /* GameListView.swift in Sources */,
+				6B03D4ED2615E02B00EDBAC8 /* AreaList.swift in Sources */,
 				107F52ED260B2AFD00A06DCA /* GameList.swift in Sources */,
 				103D9D96260A0E4D00CB6673 /* Area.swift in Sources */,
 				103D9D8C260A0A3600CB6673 /* Company.swift in Sources */,

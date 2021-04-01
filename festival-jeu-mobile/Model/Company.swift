@@ -7,26 +7,26 @@
 
 import Foundation
 
-class Company {
+class Company : Identifiable, ObservableObject {
     
     private(set) var id : Int
     
     private(set) var name : String
     
-    private(set) var games: [Game]
+    private(set) var adress: String
     
-    init(id : Int, name : String) {
+
+    
+    init(id : Int, name : String, adress: String) {
         
         self.id = id
         self.name = name
-        self.games = []
+        self.adress = adress
     }
     
-//    func getCompanyGames(listGames:[Game]){
-//        for i in listGames{
-//            if i.publisher.name == self.name {
-//                self.games.append(i)
-//            }
-//        }
-//    }
+    enum CodingKeys: String, CodingKey {
+    case id = "id"
+    case name = "name"
+    case adress = "adress"
+}
 }
