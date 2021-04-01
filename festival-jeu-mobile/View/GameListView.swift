@@ -19,8 +19,9 @@ struct GameListView: View {
         self.gameList = gameList
         self.intent = GameListViewIntent(gameList: gameList)
         let _ = self.gameList.$gameListState.sink(receiveValue: stateChanged)
+        if(gameList.games.isEmpty){
+            self.intent.loadGameList(url: url, nameFilter: nil)}
         
-        self.intent.loadGameList(url: url, nameFilter: nil)
     }
     
     private var searchState : GameListState{

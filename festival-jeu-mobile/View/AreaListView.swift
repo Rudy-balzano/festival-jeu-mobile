@@ -8,13 +8,69 @@
 import SwiftUI
 
 struct AreaListView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    
+    @ObservedObject var areaList : AreaListViewModel
+    var intent : AreaListViewIntent
+    
+    
+    private var url: String = "http://localhost:3000/festival/current/areas"
+    
+    init(areaList : AreaListViewModel){
+        self.areaList = areaList
+        self.intent = AreaListViewIntent(areaList: areaList)
+        let _ = self.areaList.$areaListState.sink(receiveValue: stateChanged)
+        
+        self.intent.loadAreaList(url: url, labelFilter: nil)
     }
-}
+    
+    private var searchState : AreaListState{
+        return self.areaList.areaListState
+    }
+    
+    @State private var showModel = false
+    @State var detailPresented = false
+    @State var revealSearchForm = false
+    @State var textSearch = ""
+    
+    var areas : [AreaViewModel]{
+        return self.areaList.areas
+    }
+    
+    private func filterSearch(area: AreaViewModel) -> Bool{
+        var ret = true
+        if !textSearch.isEmpty {
+            ret = false
+            ret = ret || area.label.contains(textSearch)
+            
+        }
+        return ret
+    }
+    
+    func stateChanged(state: AreaListState){
+        switch state {
+        case .newAreas:
+            self.intent.areaLoaded()
+        default:
+            break
+        }
+    }
+    
+    var body: some View {
+        return NavigationView{
+            VStack{
+                TextField("term filter", text: $textSearch).font(.footnote)
+                Spacer()
+                ZStack{
+                    List{
+                        ForEach( self.areaList.areas.filter(filterSearch)){ area in
+                          NavigationLink(destination: GameListView(gameList: intent.getGamesForArea(area : area))){
+                              Text(area.model.label)
 
-struct AreaListView_Previews: PreviewProvider {
-    static var previews: some View {
-        AreaListView()
+                            }
+                        }
+                    }
+                }
+            }.navigationTitle("List of areas")
+        }
     }
 }

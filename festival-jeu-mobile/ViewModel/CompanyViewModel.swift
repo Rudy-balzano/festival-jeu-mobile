@@ -19,9 +19,6 @@ class CompanyViewModel: Identifiable {
     var name : String{
         return model.name
     }
-    var adress: String{
-        return model.adress
-    }
     
     init(_ company : Company){
         self.model = company

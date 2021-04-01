@@ -66,6 +66,10 @@ class GameListViewModel: ObservableObject, GameListDelegate{
         self.games.removeAll()
     }
     
+    func gameAdded(game : Game) {
+        self.model.addGame(game: game)
+    }
+    
     func newGameList() {
         self.games.removeAll()
         for game in self.model.games{

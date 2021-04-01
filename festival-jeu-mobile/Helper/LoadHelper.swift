@@ -21,10 +21,19 @@ struct GameData : Decodable {
     var publisherName : String
     var areaName : String?
 }
+struct AreaData : Decodable {
+    var id : Int
+    var label : String
+    
+}
+struct CompanyData : Decodable {
+    var id : Int
+    var name : String
+}
 
 struct LoadHelper {
     
-    static func gameData2Game(data: [GameData]) -> [Game]?{
+    static func gameData2Game(data: [GameData]) -> [Game]{
         var games = [Game]()
         for gdata in data{
             let game : Game
@@ -39,52 +48,51 @@ struct LoadHelper {
     return games
     }
     
-    static func loadGames(fromFile filename: String) -> Result<[Game],HttpRequestError>{
-        guard let url = Bundle.main.url(forResource: festival_jeu_mobileApp.filename, withExtension: nil) else {
-            return .failure(.badURL(filename))
+    static func areaData2Area(data: [AreaData]) -> [Area]{
+        var areas = [Area]()
+        for gdata in data{
+            let area : Area
+            area = Area(id: gdata.id, label: gdata.label)
+            areas.append(area)
         }
-        return self.loadGames(fromFileUrl: url)
+            return areas
+    }
+    static func companyData2Company(data: [CompanyData]) -> [Company]{
+        var companies = [Company]()
+        for gdata in data{
+            let company : Company
+            company = Company(id: gdata.id, name: gdata.name)
+            companies.append(company)
+        }
+            return companies
     }
     
-    static func loadGames(fromFileUrl url: URL) -> Result<[Game],HttpRequestError>{
-        let result = InOutHelper.loadJsonFile(from: url, dataType: [GameData].self)
-        switch result{
-        case let .success(data):
-            guard let tracks = self.gameData2Game(data: data) else { return .failure(.JsonDecodingFailed) }
-            return .success(tracks)
-        case let .failure(error):
-            return .failure(error)
-        }
-    }
     
-    static func loadGamesFromAPI(url surl: String, endofrequest: @escaping (Result<[Game],HttpRequestError>) -> Void){
+    static func loadFromAPI<T : Decodable>(url surl: String, endofrequest: @escaping (Result<[T],HttpRequestError>) -> Void){
             guard let url = URL(string: surl) else {
                 endofrequest(.failure(.badURL(surl)))
                 return
             }
-            self.loadGamesFromAPI(url: url, endofrequest: endofrequest)
+            self.loadFromAPI(url: url, endofrequest: endofrequest)
         }
-        static func loadGamesFromAPI(url: URL, endofrequest: @escaping (Result<[Game],HttpRequestError>) -> Void){
-            self.loadGamesFromJsonData(url: url, endofrequest: endofrequest)
+    
+    static func loadFromAPI<T: Decodable>(url: URL, endofrequest: @escaping (Result<[T],HttpRequestError>) -> Void){
+            self.loadFromJsonData(url: url, endofrequest: endofrequest)
         }
 
-        private static func loadGamesFromJsonData(url: URL, endofrequest: @escaping (Result<[Game],HttpRequestError>) -> Void){
+    private static func loadFromJsonData<T: Decodable>(url: URL, endofrequest: @escaping (Result<[T],HttpRequestError>) -> Void){
             let request = URLRequest(url: url)
             URLSession.shared.dataTask(with: request) { data, response, error in
                 if let data = data {
                     let decodedData : Decodable?
-                    decodedData = try? JSONDecoder().decode([GameData].self, from: data)
+                    decodedData = try? JSONDecoder().decode([T].self, from: data)
                     guard let decodedResponse = decodedData else {
                         DispatchQueue.main.async { endofrequest(.failure(.JsonDecodingFailed)) }
                         return
                     }
-                    let gamesData : [GameData] = (decodedResponse as! [GameData])
-                    guard let games = self.gameData2Game(data: gamesData)else{
-                        DispatchQueue.main.async { endofrequest(.failure(.JsonDecodingFailed)) }
-                        return
-                    }
+                    let tData : [T] = (decodedResponse as! [T])
                     DispatchQueue.main.async {
-                        endofrequest(.success(games))
+                        endofrequest(.success(tData))
                     }
                 }
                 else{

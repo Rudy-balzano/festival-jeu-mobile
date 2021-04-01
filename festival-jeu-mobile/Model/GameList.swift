@@ -10,6 +10,7 @@ import Foundation
 protocol GameListDelegate {
     func newGameList()
     func gameListDeleted()
+    func gameAdded(game : Game)
 }
 
 class GameList: ObservableObject {
@@ -30,5 +31,10 @@ class GameList: ObservableObject {
     func removeAllGames(){
         self.games.removeAll()
         self.delegate?.gameListDeleted()
+    }
+    
+    func addGame(game : Game){
+        self.games.append(game)
+        self.delegate?.gameAdded(game: game)
     }
 }

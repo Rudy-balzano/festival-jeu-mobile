@@ -20,19 +20,11 @@ class GameListViewIntent{
         self.gameList.gameListState = .ready
     }
     
-    func httpJsonLoaded(result : Result<[Game],HttpRequestError>){
-        print("aaaa")
+    func httpJsonLoaded(result : Result<[GameData],HttpRequestError>){
         switch result {
         case let .success(data):
-            print(data)
-            if let name = nameFilter{
-                print("a")
-                let games = data.filter({game in game.name.lowercased().contains(name.lowercased())})
-                gameList.gameListState = .loaded(games)
-            }
-            else {
-                gameList.gameListState = .loaded(data)
-            }
+            let games = LoadHelper.gameData2Game(data: data)
+            gameList.gameListState = .loaded(games)
         case let .failure(error):
             gameList.gameListState = .loadingError(error)
         }
@@ -47,7 +39,6 @@ class GameListViewIntent{
     func loadGameList(url: String, nameFilter: String?){
         self.nameFilter = nameFilter
         gameList.gameListState = .loading(url)
-        LoadHelper.loadGamesFromAPI(url: url, endofrequest: httpJsonLoaded)
-        //print(gameList.games.count)
+        LoadHelper.loadFromAPI(url: url, endofrequest: httpJsonLoaded)
     }
 }

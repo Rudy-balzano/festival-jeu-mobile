@@ -12,7 +12,9 @@ struct MainView: View {
 //    @StateObject var gameList : GameListViewModel = GameListViewModel(GameList())
     
     var body: some View {
-        GameListView(gameList: GameListViewModel(GameList()))
+        //GameListView(gameList: GameListViewModel(GameList()))
+        AreaListView(areaList: AreaListViewModel(AreaList()))
+        //CompanyListView(companyList: CompanyListViewModel(CompanyList()))
     }
 }
 
