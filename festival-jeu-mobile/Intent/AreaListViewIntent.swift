@@ -53,23 +53,6 @@ class AreaListViewIntent{
         areaList.areaListState = .loading(url)
         LoadHelper.loadFromAPI(url: url, endofrequest: httpJsonLoaded)
     }
-    
-    func getGamesForArea(area: AreaViewModel) -> GameListViewModel{
         
-        let url = "http://localhost:3000/festival/current/reserved-games"
-        
-        let gameList = GameList()
-        
-        LoadHelper.loadFromAPI(url: url, endofrequest: gameLoaded)
-        
-        for g in self.gameList {
-            if(g.area == area.label){
-                gameList.addGame(game: g)
-            }
-        }
-        
-        let gameListVM = GameListViewModel(gameList)
-        return gameListVM
-        
-    }
 }
+

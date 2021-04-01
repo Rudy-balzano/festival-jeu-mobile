@@ -51,24 +51,4 @@ class CompanyListViewIntent{
         companyList.companyListState = .loading(url)
         LoadHelper.loadFromAPI(url: url, endofrequest: httpJsonLoaded)
     }
-    
-    func getGamesForCompany(company: CompanyViewModel) -> GameListViewModel{
-        
-        let url = "http://localhost:3000/festival/current/reserved-games"
-        
-        let gameList = GameList()
-        
-        LoadHelper.loadFromAPI(url: url, endofrequest: gameLoaded)
-        
-        for g in self.gameList {
-            if(g.publisher == company.name){
-                gameList.addGame(game: g)
-            }
-        }
-        
-        let gameListVM = GameListViewModel(gameList)
-        print(gameListVM)
-        return gameListVM
-        
-    }
 }

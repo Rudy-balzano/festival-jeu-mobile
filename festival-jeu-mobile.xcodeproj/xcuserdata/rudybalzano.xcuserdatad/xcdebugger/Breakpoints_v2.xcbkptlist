@@ -36,5 +36,85 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "75283DCF-F0CF-4262-9D22-2B5FFA4AF994"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "festival-jeu-mobile/View/AreaListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6162C736-939D-4DBC-B2CD-099D331C26F1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "festival-jeu-mobile/View/AreaListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "6162C736-939D-4DBC-B2CD-099D331C26F1 - f7eee0fe67a31414"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (festival_jeu_mobile.AreaViewModel) -&gt; SwiftUI.NavigationLink&lt;SwiftUI.Text, festival_jeu_mobile.GameForAreaListView&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;festival_jeu_mobile.AreaViewModel&gt;, Swift.Int, SwiftUI.NavigationLink&lt;SwiftUI.Text, festival_jeu_mobile.GameForAreaListView&gt;&gt; in closure #1 () -&gt; SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.Array&lt;festival_jeu_mobile.AreaViewModel&gt;, Swift.Int, SwiftUI.NavigationLink&lt;SwiftUI.Text, festival_jeu_mobile.GameForAreaListView&gt;&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer, SwiftUI.ZStack&lt;SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.Array&lt;festival_jeu_mobile.AreaViewModel&gt;, Swift.Int, SwiftUI.NavigationLink&lt;SwiftUI.Text, festival_jeu_mobile.GameForAreaListView&gt;&gt;&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.navigationTitle(SwiftUI.LocalizedStringKey) -&gt; some&gt;&gt;.0 in festival_jeu_mobile.AreaListView.body.getter : some"
+                  moduleName = "festival-jeu-mobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rudybalzano/Documents/Cours/festival-jeu-mobile/festival-jeu-mobile/View/AreaListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "6162C736-939D-4DBC-B2CD-099D331C26F1 - cb55af9dae8bdfd5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.Text in closure #1 (festival_jeu_mobile.AreaViewModel) -&gt; SwiftUI.NavigationLink&lt;SwiftUI.Text, festival_jeu_mobile.GameForAreaListView&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;festival_jeu_mobile.AreaViewModel&gt;, Swift.Int, SwiftUI.NavigationLink&lt;SwiftUI.Text, festival_jeu_mobile.GameForAreaListView&gt;&gt; in closure #1 () -&gt; SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.Array&lt;festival_jeu_mobile.AreaViewModel&gt;, Swift.Int, SwiftUI.NavigationLink&lt;SwiftUI.Text, festival_jeu_mobile.GameForAreaListView&gt;&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer, SwiftUI.ZStack&lt;SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.Array&lt;festival_jeu_mobile.AreaViewModel&gt;, Swift.Int, SwiftUI.NavigationLink&lt;SwiftUI.Text, festival_jeu_mobile.GameForAreaListView&gt;&gt;&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.navigationTitle(SwiftUI.LocalizedStringKey) -&gt; some&gt;&gt;.0 in festival_jeu_mobile.AreaListView.body.getter : some"
+                  moduleName = "festival-jeu-mobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rudybalzano/Documents/Cours/festival-jeu-mobile/festival-jeu-mobile/View/AreaListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E10D0BC4-A296-4DE7-BCBF-55C87967F597"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "festival-jeu-mobile/View/AreaListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

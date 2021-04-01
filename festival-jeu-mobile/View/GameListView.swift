@@ -12,16 +12,39 @@ struct GameListView: View {
     @ObservedObject var gameList : GameListViewModel
     var intent : GameListViewIntent
     
-    
-    private var url: String = "http://localhost:3000/festival/current/reserved-games"
-    
-    init(gameList : GameListViewModel){
+    init(){
+        
+        let gameList = GameListViewModel(GameList())
+        
+        let url: String = "http://localhost:3000/festival/current/reserved-games"
+        
         self.gameList = gameList
         self.intent = GameListViewIntent(gameList: gameList)
         let _ = self.gameList.$gameListState.sink(receiveValue: stateChanged)
-        if(gameList.games.isEmpty){
-            self.intent.loadGameList(url: url, nameFilter: nil)}
+        self.intent.loadGameList(url: url, nameFilter: nil)
         
+    }
+    
+    init(area: AreaViewModel){
+        
+        let url = "http://localhost:3000/festival/current/reserved-games/area/\(area.id)"
+        
+        let gameList = GameListViewModel(GameList())
+        self.gameList = gameList
+        self.intent = GameListViewIntent(gameList: gameList)
+        let _ = self.gameList.$gameListState.sink(receiveValue: stateChanged)
+        self.intent.loadGameList(url: url, nameFilter: nil)
+    }
+    
+    init(company: CompanyViewModel){
+        
+        let url = "http://localhost:3000/festival/current/reserved-games/company/\(company.id)"
+        
+        let gameList = GameListViewModel(GameList())
+        self.gameList = gameList
+        self.intent = GameListViewIntent(gameList: gameList)
+        let _ = self.gameList.$gameListState.sink(receiveValue: stateChanged)
+        self.intent.loadGameList(url: url, nameFilter: nil)
     }
     
     private var searchState : GameListState{

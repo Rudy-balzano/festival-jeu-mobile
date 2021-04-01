@@ -63,7 +63,7 @@ struct CompanyListView: View {
                 ZStack{
                     List{
                         ForEach( self.companyList.companies.filter(filterSearch)){ company in
-                            NavigationLink(destination: GameListView(gameList: intent.getGamesForCompany(company : company))){
+                            NavigationLink(destination: GameListView(company: company)){
                                 Text(company.model.name)
                                 
                             }

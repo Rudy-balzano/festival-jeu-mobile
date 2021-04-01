@@ -63,7 +63,7 @@ struct AreaListView: View {
                 ZStack{
                     List{
                         ForEach( self.areaList.areas.filter(filterSearch)){ area in
-                            NavigationLink(destination: GameForAreaListView(gameList: gameList, area:area))){
+                            NavigationLink(destination: GameListView(area: area)){
                               Text(area.model.label)
 
                             }

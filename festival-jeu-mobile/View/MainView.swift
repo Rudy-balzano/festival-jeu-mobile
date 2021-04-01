@@ -14,7 +14,7 @@ struct MainView: View {
     
     var body: some View {
         TabView(selection: $tabSelected){
-            GameListView(gameList: GameListViewModel(GameList()))
+            GameListView()
                 .tabItem{
                     Label("Games", systemImage: "list.triangle")
                 }.tag(0)
