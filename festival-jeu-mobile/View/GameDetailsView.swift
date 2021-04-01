@@ -21,17 +21,38 @@ struct GameDetailsView: View {
     var body: some View {
         VStack{
             HStack{
-                Text(jeu.name)
-                Text(jeu.notice)
-                Spacer()
-            }
+                Text(jeu.name)}
+//            HStack{
+//                Text(jeu.notice)}
+//            HStack{
+//                Text(jeu.duration)}
+//            HStack{
+//                Text(jeu.minPlayers)}
+//            HStack{
+//                Text(jeu.maxPlayers)}
+//            HStack{
+//                Text(jeu.minAge)}
+//            HStack{
+//                Text(jeu.maxAge)}
+//            HStack{
+//                Text(jeu.isPrototype)}
+//            HStack{
+//                Text(jeu.publisher)}
+//            HStack{
+//                Text(jeu.gameType)}
+//            HStack{
+//                Text(jeu.area)}
+//            HStack{
+//                Text(jeu.duration)}
+//                Spacer()
+//            }
 //            HStack{
 //                Text(game.notice)
 //            }
         }
-    }
 }
 
+}
 //struct GameDetails_Previews: PreviewProvider {
 //    static var previews: some View {
 //        let a = "a"

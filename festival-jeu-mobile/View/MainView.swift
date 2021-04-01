@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    @State private var tabSelected  = 1
+    @State private var tabSelected  = 0
     
 //    @StateObject var gameList : GameListViewModel = GameListViewModel(GameList())
     

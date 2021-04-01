@@ -67,6 +67,7 @@ class CompanyListViewIntent{
         }
         
         let gameListVM = GameListViewModel(gameList)
+        print(gameListVM)
         return gameListVM
         
     }
