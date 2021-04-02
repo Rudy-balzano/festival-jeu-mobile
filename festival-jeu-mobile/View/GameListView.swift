@@ -18,7 +18,7 @@ struct GameListView: View {
         
         let gameList = GameListViewModel(GameList())
         
-        let url: String = "http://localhost:3000/festival/current/reserved-games"
+        let url: String = "https://festival-du-jeu-montpellier.herokuapp.com/festival/current/reserved-games"
         
         self.gameList = gameList
         self.intent = GameListViewIntent(gameList: gameList)
@@ -32,7 +32,7 @@ struct GameListView: View {
     
     init(area: AreaViewModel){
         
-        let url = "http://localhost:3000/festival/current/reserved-games/area/\(area.id)"
+        let url = "https://festival-du-jeu-montpellier.herokuapp.com/festival/current/reserved-games/area/\(area.id)"
         
         let gameList = GameListViewModel(GameList())
         self.gameList = gameList
@@ -46,7 +46,7 @@ struct GameListView: View {
     
     init(company: CompanyViewModel){
         
-        let url = "http://localhost:3000/festival/current/reserved-games/company/\(company.id)"
+        let url = "https://festival-du-jeu-montpellier.herokuapp.com/festival/current/reserved-games/company/\(company.id)"
         
         let gameList = GameListViewModel(GameList())
         self.gameList = gameList
