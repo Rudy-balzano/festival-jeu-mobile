@@ -7,8 +7,12 @@
 
 import SwiftUI
 
+    
 struct MainView: View {
     @State private var tabSelected  = 0
+    init() {
+    UITabBar.appearance().backgroundColor = UIColor.green
+    }
     
 //    @StateObject var gameList : GameListViewModel = GameListViewModel(GameList())
     
@@ -33,8 +37,3 @@ struct MainView: View {
     }
 }
 
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-    }
-}

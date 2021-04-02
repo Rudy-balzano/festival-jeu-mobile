@@ -70,7 +70,8 @@ struct CompanyListView: View {
                         }
                     }
                 }
+            
             }.navigationTitle("List of companies")
-        }
+            }
     }
 }

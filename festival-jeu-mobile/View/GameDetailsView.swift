@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct GameDetailsView: View {
+    @Environment(\.presentationMode) var presentation
+
     
     //var game: Game
     @ObservedObject var gamelist : GameListViewModel
@@ -25,11 +27,6 @@ struct GameDetailsView: View {
                 HStack{
                 Text("Nom du jeu:")
                 Text(jeu.name)
-                Spacer()
-            }
-            HStack{
-                Text("Notice du jeu:")
-                Text(jeu.notice)
                 Spacer()
             }
             
