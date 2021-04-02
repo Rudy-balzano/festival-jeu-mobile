@@ -35,7 +35,6 @@
 		6B03D5102615E63300EDBAC8 /* CompanyListViewIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B03D50F2615E63300EDBAC8 /* CompanyListViewIntent.swift */; };
 		6B03D5152615F9EF00EDBAC8 /* AreaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B03D5142615F9EF00EDBAC8 /* AreaListView.swift */; };
 		6B03D51A2615F9FD00EDBAC8 /* CompanyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B03D5192615F9FD00EDBAC8 /* CompanyListView.swift */; };
-		6B03D51F2616593800EDBAC8 /* GameForAreaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B03D51E2616593800EDBAC8 /* GameForAreaListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +89,6 @@
 		6B03D50F2615E63300EDBAC8 /* CompanyListViewIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListViewIntent.swift; sourceTree = "<group>"; };
 		6B03D5142615F9EF00EDBAC8 /* AreaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaListView.swift; sourceTree = "<group>"; };
 		6B03D5192615F9FD00EDBAC8 /* CompanyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListView.swift; sourceTree = "<group>"; };
-		6B03D51E2616593800EDBAC8 /* GameForAreaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameForAreaListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,7 +187,6 @@
 				1015B72C2614865100E3F79B /* MainView.swift */,
 				6B03D5142615F9EF00EDBAC8 /* AreaListView.swift */,
 				6B03D5192615F9FD00EDBAC8 /* CompanyListView.swift */,
-				6B03D51E2616593800EDBAC8 /* GameForAreaListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -374,7 +371,6 @@
 				6B03D51A2615F9FD00EDBAC8 /* CompanyListView.swift in Sources */,
 				6B03D5062615E52C00EDBAC8 /* CompanyListViewModel.swift in Sources */,
 				107F52E8260B29C800A06DCA /* GameListViewModel.swift in Sources */,
-				6B03D51F2616593800EDBAC8 /* GameForAreaListView.swift in Sources */,
 				1015B72D2614865100E3F79B /* MainView.swift in Sources */,
 				6B03D4FC2615E32800EDBAC8 /* AreaListViewModel.swift in Sources */,
 				107F52FE260B5B5100A06DCA /* InOutHelper.swift in Sources */,

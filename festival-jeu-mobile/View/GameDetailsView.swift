@@ -19,46 +19,58 @@ struct GameDetailsView: View {
     }
     
     var body: some View {
-        VStack{
+        GeometryReader{ geometry in
+            VStack{
+            Group{
+                HStack{
+                Text("Nom du jeu:")
+                Text(jeu.name)
+                Spacer()
+            }
             HStack{
-                Text(jeu.name)}
-//            HStack{
-//                Text(jeu.notice)}
-//            HStack{
-//                Text(jeu.duration)}
-//            HStack{
-//                Text(jeu.minPlayers)}
-//            HStack{
-//                Text(jeu.maxPlayers)}
-//            HStack{
-//                Text(jeu.minAge)}
-//            HStack{
-//                Text(jeu.maxAge)}
-//            HStack{
-//                Text(jeu.isPrototype)}
-//            HStack{
-//                Text(jeu.publisher)}
-//            HStack{
-//                Text(jeu.gameType)}
-//            HStack{
-//                Text(jeu.area)}
-//            HStack{
-//                Text(jeu.duration)}
-//                Spacer()
-//            }
-//            HStack{
-//                Text(game.notice)
-//            }
+                Text("Notice du jeu:")
+                Text(jeu.notice)
+                Spacer()
+            }
+            
+            HStack{
+                Text("Durée du jeu:")
+                Text(jeu.duration)
+                Spacer()}
+
+            HStack{
+                Text("Nombres de joueurs:")
+                Text("\(jeu.minPlayers)"+"-"+"\(jeu.maxPlayers)")
+                Spacer()}
+            HStack{
+                Text("Age minimum:")
+                Text("\(jeu.minAge)")
+                Spacer()}
+
+            HStack{
+                Text("Age maximum:")
+                Text("\(jeu.maxAge)")
+                Spacer()}
+            
+            
+            HStack{
+                Text("Editeur du jeu:")
+                Text(jeu.publisher)
+                Spacer()}
+            HStack{
+                Text("Type de jeu:")
+                Text(jeu.gameType)
+                Spacer()}
+            HStack{
+                Text("Zone du jeu:")
+                Text(jeu.area)
+                Spacer()}
+
+                
+        }.padding(.bottom, geometry.size.height * 0.01 )
         }
+        }.navigationTitle(jeu.name)
+
 }
 
 }
-//struct GameDetails_Previews: PreviewProvider {
-//    static var previews: some View {
-//        let a = "a"
-//        let company = Company(id:1, name:a)
-//        let area = Area(id: 1, label: a)
-//
-//        GameDetailsView(game: game)
-//    }
-//}

@@ -12,6 +12,8 @@ struct GameListView: View {
     @ObservedObject var gameList : GameListViewModel
     var intent : GameListViewIntent
     
+    let title : String
+    
     init(){
         
         let gameList = GameListViewModel(GameList())
@@ -20,8 +22,11 @@ struct GameListView: View {
         
         self.gameList = gameList
         self.intent = GameListViewIntent(gameList: gameList)
+        self.title = "Liste des jeux"
         let _ = self.gameList.$gameListState.sink(receiveValue: stateChanged)
         self.intent.loadGameList(url: url, nameFilter: nil)
+        
+        
         
     }
     
@@ -32,8 +37,11 @@ struct GameListView: View {
         let gameList = GameListViewModel(GameList())
         self.gameList = gameList
         self.intent = GameListViewIntent(gameList: gameList)
+        self.title = "\(area.label)"
         let _ = self.gameList.$gameListState.sink(receiveValue: stateChanged)
         self.intent.loadGameList(url: url, nameFilter: nil)
+        
+        
     }
     
     init(company: CompanyViewModel){
@@ -43,8 +51,11 @@ struct GameListView: View {
         let gameList = GameListViewModel(GameList())
         self.gameList = gameList
         self.intent = GameListViewIntent(gameList: gameList)
+        self.title = " \(company.name)"
         let _ = self.gameList.$gameListState.sink(receiveValue: stateChanged)
         self.intent.loadGameList(url: url, nameFilter: nil)
+        
+        
     }
     
     private var searchState : GameListState{
@@ -94,7 +105,7 @@ struct GameListView: View {
                         }
                     }
                 }
-            }.navigationTitle("List of games")
+            }.navigationTitle(title)
         }
     }
 }
